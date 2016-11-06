@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Diego" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcG-4x-x4z">
+                                <rect key="frame" x="63" y="60" width="248" height="221"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="221" id="ffi-kg-7MA"/>
+                                    <constraint firstAttribute="width" constant="248" id="iu3-ef-E2b"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWV-xa-VkN">
+                                <rect key="frame" x="63" y="311" width="248" height="40"/>
+                                <color key="backgroundColor" red="0.57098135960074292" green="0.71201803800680041" blue="0.85259359137055835" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="06j-1G-NhX"/>
+                                    <constraint firstAttribute="width" constant="248" id="0SA-5a-3AQ"/>
+                                </constraints>
+                                <state key="normal" title="Upload Picture">
+                                    <color key="titleColor" red="0.39502332498271303" green="0.62712166878172582" blue="0.3723436505138436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="UploadPictureButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AxA-eT-Ypz"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Aba-Sn-yfu">
+                                <rect key="frame" x="63" y="60" width="246" height="219"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88041780085173038" green="0.96416052079743042" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cWV-xa-VkN" firstAttribute="top" secondItem="LcG-4x-x4z" secondAttribute="bottom" constant="30" id="0en-JO-C8I"/>
+                            <constraint firstItem="Aba-Sn-yfu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="63" id="7eZ-p0-NNz"/>
+                            <constraint firstAttribute="bottom" secondItem="Aba-Sn-yfu" secondAttribute="bottom" constant="388" id="Tsc-Ye-6vd"/>
+                            <constraint firstItem="LcG-4x-x4z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="ZJb-BL-MyN"/>
+                            <constraint firstAttribute="trailing" secondItem="Aba-Sn-yfu" secondAttribute="trailing" constant="66" id="e1Y-AB-auX"/>
+                            <constraint firstItem="Aba-Sn-yfu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="mnQ-Le-leh"/>
+                            <constraint firstItem="LcG-4x-x4z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rXm-wr-HIp"/>
+                            <constraint firstItem="cWV-xa-VkN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sQC-tL-afx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="UploadPicture" destination="cWV-xa-VkN" id="xRa-T3-BdH"/>
+                        <outlet property="textView" destination="Aba-Sn-yfu" id="rPl-B0-akP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>
