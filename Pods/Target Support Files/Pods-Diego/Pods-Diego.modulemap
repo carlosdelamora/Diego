@@ -1,0 +1,6 @@
+framework module Pods_Diego {
+  umbrella header "Pods-Diego-umbrella.h"
+
+  export *
+  module * { export * }
+}

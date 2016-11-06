@@ -64,7 +64,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="UploadPicture" destination="cWV-xa-VkN" id="xRa-T3-BdH"/>
                         <outlet property="textView" destination="Aba-Sn-yfu" id="rPl-B0-akP"/>
                     </connections>
                 </viewController>

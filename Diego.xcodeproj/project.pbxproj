@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B7AF347F5D49B89E6096D9B /* Pods_Diego.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790F0C6E6D38CF5AED0EC3DC /* Pods_Diego.framework */; };
+		CAA3765B1DCEC01600B75CDD /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA3765A1DCEC01600B75CDD /* TesseractOCR.framework */; };
 		CAB50C3B1DCEAA480087FB41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB50C3A1DCEAA480087FB41 /* AppDelegate.swift */; };
 		CAB50C3D1DCEAA480087FB41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB50C3C1DCEAA480087FB41 /* ViewController.swift */; };
 		CAB50C401DCEAA480087FB41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB50C3E1DCEAA480087FB41 /* Main.storyboard */; };
@@ -15,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60DFE02B9212007E8AE55734 /* Pods-Diego.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diego.release.xcconfig"; path = "Pods/Target Support Files/Pods-Diego/Pods-Diego.release.xcconfig"; sourceTree = "<group>"; };
+		790F0C6E6D38CF5AED0EC3DC /* Pods_Diego.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diego.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAA3765A1DCEC01600B75CDD /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = "../../../Library/Developer/Xcode/DerivedData/Diego-fmsapfudzwovwjecqnikywsmwvdz/Build/Products/Debug-iphoneos/TesseractOCRiOS/TesseractOCR.framework"; sourceTree = "<group>"; };
 		CAB50C371DCEAA480087FB41 /* Diego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diego.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB50C3A1DCEAA480087FB41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB50C3C1DCEAA480087FB41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		CAB50C411DCEAA480087FB41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAB50C441DCEAA480087FB41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAB50C461DCEAA480087FB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED44D5D1B3DC1E802A873026 /* Pods-Diego.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diego.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Diego/Pods-Diego.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA3765B1DCEC01600B75CDD /* TesseractOCR.framework in Frameworks */,
+				8B7AF347F5D49B89E6096D9B /* Pods_Diego.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68AC6D1EF074E49A04CF842A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAA3765A1DCEC01600B75CDD /* TesseractOCR.framework */,
+				790F0C6E6D38CF5AED0EC3DC /* Pods_Diego.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CAB50C2E1DCEAA480087FB41 = {
 			isa = PBXGroup;
 			children = (
 				CAB50C391DCEAA480087FB41 /* Diego */,
 				CAB50C381DCEAA480087FB41 /* Products */,
+				E8B22E587E9DE187B90476A8 /* Pods */,
+				68AC6D1EF074E49A04CF842A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +83,15 @@
 			path = Diego;
 			sourceTree = "<group>";
 		};
+		E8B22E587E9DE187B90476A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED44D5D1B3DC1E802A873026 /* Pods-Diego.debug.xcconfig */,
+				60DFE02B9212007E8AE55734 /* Pods-Diego.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAB50C491DCEAA480087FB41 /* Build configuration list for PBXNativeTarget "Diego" */;
 			buildPhases = (
+				B7E87EB62438F4FA485F4334 /* 📦 Check Pods Manifest.lock */,
 				CAB50C331DCEAA480087FB41 /* Sources */,
 				CAB50C341DCEAA480087FB41 /* Frameworks */,
 				CAB50C351DCEAA480087FB41 /* Resources */,
+				CAE0B4503D09A97AA9EA2544 /* 📦 Embed Pods Frameworks */,
+				9F56AF47ED72D82F1CA5C3A2 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +162,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9F56AF47ED72D82F1CA5C3A2 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Diego/Pods-Diego-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7E87EB62438F4FA485F4334 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CAE0B4503D09A97AA9EA2544 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Diego/Pods-Diego-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CAB50C331DCEAA480087FB41 /* Sources */ = {
@@ -259,10 +338,13 @@
 		};
 		CAB50C4A1DCEAA480087FB41 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED44D5D1B3DC1E802A873026 /* Pods-Diego.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5PRK9NET39;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Diego/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = noCompany.Diego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,10 +354,13 @@
 		};
 		CAB50C4B1DCEAA480087FB41 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60DFE02B9212007E8AE55734 /* Pods-Diego.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5PRK9NET39;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Diego/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = noCompany.Diego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +387,7 @@
 				CAB50C4B1DCEAA480087FB41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
