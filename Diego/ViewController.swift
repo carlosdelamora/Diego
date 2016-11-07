@@ -7,6 +7,7 @@
 //
 import Foundation
 import UIKit
+import TesseractOCR
 
 class ViewController: UIViewController, UITextViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -75,6 +76,65 @@ class ViewController: UIViewController, UITextViewDelegate,UINavigationControlle
         activityIndicator = nil
     }
     
+    //scale the picture
+    func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
+        
+        var scaledSize = CGSize(width: maxDimension, height: maxDimension)
+        var scaleFactor: CGFloat
+        
+        if image.size.width > image.size.height {
+            scaleFactor = image.size.height / image.size.width
+            scaledSize.width = maxDimension
+            scaledSize.height = scaledSize.width * scaleFactor
+        } else {
+            scaleFactor = image.size.width / image.size.height
+            scaledSize.height = maxDimension
+            scaledSize.width = scaledSize.height * scaleFactor
+        }
+        
+        UIGraphicsBeginImageContext(scaledSize)
+        image.draw(in: CGRect(origin: CGPoint(x:0,y:0), size: CGSize(width:scaledSize.width, height: scaledSize.height)))
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        // TODO: write a guard statement to make sure that scaledImage is not nil
+        return scaledImage!
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : Any]) {
+        let selectedPhoto = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let scaledImage = scaleImage(image: selectedPhoto, maxDimension: 640)
+        
+        addActivityIndicator()
+        
+        dismiss(animated: true, completion: {
+            self.performImageRecognition(image: scaledImage)
+        })
+    }
+    
+    
+    
+   
+    func performImageRecognition(image: UIImage) {
+        // 1
+        let tesseract = G8Tesseract(language: "eng+fra")
+        // 2
+        
+        // 3
+        tesseract?.engineMode = .tesseractCubeCombined
+        // 4
+        tesseract?.pageSegmentationMode = .auto
+        // 5
+        tesseract?.maximumRecognitionTime = 60.0
+        // 6
+        tesseract?.image = image.g8_blackAndWhite()
+        tesseract?.recognize()
+        // 7
+        textView.text = tesseract?.recognizedText
+        textView.isEditable = true
+        // 8
+        removeActivityIndicator()
+    }
 
 }
 
