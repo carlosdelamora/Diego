@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8B7AF347F5D49B89E6096D9B /* Pods_Diego.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790F0C6E6D38CF5AED0EC3DC /* Pods_Diego.framework */; };
 		CAA3765B1DCEC01600B75CDD /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA3765A1DCEC01600B75CDD /* TesseractOCR.framework */; };
+		CAA3765D1DD02EC700B75CDD /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = CAA3765C1DD02EC700B75CDD /* tessdata */; };
+		CAA3765F1DD02F2900B75CDD /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA3765E1DD02F2900B75CDD /* CoreImage.framework */; };
+		CAA376611DD02F6700B75CDD /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA376601DD02F6700B75CDD /* libstdc++.6.0.9.tbd */; };
 		CAB50C3B1DCEAA480087FB41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB50C3A1DCEAA480087FB41 /* AppDelegate.swift */; };
 		CAB50C3D1DCEAA480087FB41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB50C3C1DCEAA480087FB41 /* ViewController.swift */; };
 		CAB50C401DCEAA480087FB41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB50C3E1DCEAA480087FB41 /* Main.storyboard */; };
@@ -20,6 +23,10 @@
 		60DFE02B9212007E8AE55734 /* Pods-Diego.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diego.release.xcconfig"; path = "Pods/Target Support Files/Pods-Diego/Pods-Diego.release.xcconfig"; sourceTree = "<group>"; };
 		790F0C6E6D38CF5AED0EC3DC /* Pods_Diego.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diego.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA3765A1DCEC01600B75CDD /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = "../../../Library/Developer/Xcode/DerivedData/Diego-fmsapfudzwovwjecqnikywsmwvdz/Build/Products/Debug-iphoneos/TesseractOCRiOS/TesseractOCR.framework"; sourceTree = "<group>"; };
+		CAA3765C1DD02EC700B75CDD /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = "../../../../Downloads/OCR Tutorial Resources 2/Tesseract Resources/tessdata"; sourceTree = "<group>"; };
+		CAA3765E1DD02F2900B75CDD /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		CAA376601DD02F6700B75CDD /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		CAA376621DD0374400B75CDD /* Diego-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Diego-Bridging-Header.h"; sourceTree = "<group>"; };
 		CAB50C371DCEAA480087FB41 /* Diego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diego.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB50C3A1DCEAA480087FB41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB50C3C1DCEAA480087FB41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA376611DD02F6700B75CDD /* libstdc++.6.0.9.tbd in Frameworks */,
+				CAA3765F1DD02F2900B75CDD /* CoreImage.framework in Frameworks */,
 				CAA3765B1DCEC01600B75CDD /* TesseractOCR.framework in Frameworks */,
 				8B7AF347F5D49B89E6096D9B /* Pods_Diego.framework in Frameworks */,
 			);
@@ -46,6 +55,8 @@
 		68AC6D1EF074E49A04CF842A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAA376601DD02F6700B75CDD /* libstdc++.6.0.9.tbd */,
+				CAA3765E1DD02F2900B75CDD /* CoreImage.framework */,
 				CAA3765A1DCEC01600B75CDD /* TesseractOCR.framework */,
 				790F0C6E6D38CF5AED0EC3DC /* Pods_Diego.framework */,
 			);
@@ -73,12 +84,14 @@
 		CAB50C391DCEAA480087FB41 /* Diego */ = {
 			isa = PBXGroup;
 			children = (
+				CAA3765C1DD02EC700B75CDD /* tessdata */,
 				CAB50C3A1DCEAA480087FB41 /* AppDelegate.swift */,
 				CAB50C3C1DCEAA480087FB41 /* ViewController.swift */,
 				CAB50C3E1DCEAA480087FB41 /* Main.storyboard */,
 				CAB50C411DCEAA480087FB41 /* Assets.xcassets */,
 				CAB50C431DCEAA480087FB41 /* LaunchScreen.storyboard */,
 				CAB50C461DCEAA480087FB41 /* Info.plist */,
+				CAA376621DD0374400B75CDD /* Diego-Bridging-Header.h */,
 			);
 			path = Diego;
 			sourceTree = "<group>";
@@ -128,6 +141,7 @@
 					CAB50C361DCEAA480087FB41 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 5PRK9NET39;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -156,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAB50C451DCEAA480087FB41 /* LaunchScreen.storyboard in Resources */,
+				CAA3765D1DD02EC700B75CDD /* tessdata in Resources */,
 				CAB50C421DCEAA480087FB41 /* Assets.xcassets in Resources */,
 				CAB50C401DCEAA480087FB41 /* Main.storyboard in Resources */,
 			);
@@ -341,6 +356,7 @@
 			baseConfigurationReference = ED44D5D1B3DC1E802A873026 /* Pods-Diego.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5PRK9NET39;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Diego/Info.plist;
@@ -348,6 +364,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = noCompany.Diego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Diego/Diego-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -357,6 +375,7 @@
 			baseConfigurationReference = 60DFE02B9212007E8AE55734 /* Pods-Diego.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5PRK9NET39;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Diego/Info.plist;
@@ -364,6 +383,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = noCompany.Diego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Diego/Diego-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
